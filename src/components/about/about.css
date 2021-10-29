@@ -1,0 +1,51 @@
+/* about */
+
+.about {
+    padding: 20px;
+    margin: -35px;
+}
+
+.about__intro {
+    font-size: 1rem;
+    padding: 20px 28px;
+    margin: 10px 0;
+}
+
+.about__container {
+    background-color: #dbdddf;
+    padding: 30px 20px;
+    margin-bottom: 5px;
+}
+
+.about__heading {
+    font-size: 25px;
+    font-weight: 700;
+    color: #354358;
+    margin-left: 10px;
+}
+
+/* skill-card */
+.skill-card {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.skill-card__icon {
+    width: 40px;
+    height: 40px;
+}
+
+.skill-card-body {
+    margin-left: 15px;
+
+}
+
+.skill_card__content {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6e7e91;
+}
