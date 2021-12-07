@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import Bar from './Bar';
-import { languages, experiences, tools } from '../data/resume_data';
+import {  experiences, tools } from '../data/resume_data';
 import {motion} from 'framer-motion'
 import './resume.css'
 
@@ -22,8 +22,23 @@ const resume_variant = {
         }
     }
 }
-
 const Resume = () => {
+    const [languages,setLanguages] = useState('');
+    const apiLanguage = async() => {
+         await fetch('https://aiinnovationworld.com/backend/api/getLanguages')
+        .then(response => response.json())
+        .then(data => {
+            setLanguages(data.result)
+            // console.log('api',data.result[0])
+            });
+    }
+    useEffect(() => {
+        if(languages === "")
+        {
+            apiLanguage();
+        }
+        console.log('languages',languages)
+        }, [languages]);
     return (
         <motion.div className="container resume"
             variants={resume_variant}
@@ -53,9 +68,13 @@ const Resume = () => {
                     </h5>
                     <div className="resume-language__body mt-3">
                         {
-                            languages.map(language =>
-                                <Bar key={language.name} value={language} />
-                            )
+                            languages ?
+                            Object.entries(languages).map(row =>
+                                {
+                                    console.log('row',row)
+                                    return <Bar key={row[0]} value={row[1]} />
+                                }
+                            ):''
                         }
                     </div>
                     <div className="resume-languages">

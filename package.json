@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.24.0",
     "cra-template": "1.0.3",
     "framer-motion": "^4.1.17",
     "react": "^16.13.1",

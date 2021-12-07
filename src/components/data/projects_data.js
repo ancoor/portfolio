@@ -7,6 +7,7 @@ import chat from '../../assets/projects_images/chat.jpg'
 import mla from '../../assets/projects_images/mla.jpg'
 import dashboard from '../../assets/projects_images/dashboard.jpg'
 import groceno from '../../assets/projects_images/groceno.jpg'
+import expense from '../../assets/projects_images/expense.jpg'
 
 const data_projects = [
     {
@@ -18,9 +19,17 @@ const data_projects = [
     },
 
     {
+        name: 'Expense App in React',
+        image: expense,
+        deployed_url: 'https://coder-expense.netlify.app/',
+        github_url: 'https://github.com/ancoor/expense-management',
+        category: ['react','javascript']
+    },
+
+    {
         name: 'Multi Vendor E-Commerce',
         image: groceno,
-        deployed_url: 'https://groceno.com/',
+        deployed_url: '#',
         github_url: '#',
         category: ['codeigniter', 'javascript']
     },
@@ -44,17 +53,17 @@ const data_projects = [
     {
         name: 'Clothing E-Commerce',
         image: hardware_store,
-        deployed_url: '!#',
+        deployed_url: '#',
         github_url: '#',
         category: ['wordpress']
     },
 
     {
-        name: 'Dev Portfolio',
+        name: 'Dev Portfolio in React',
         image: portfolio,
-        deployed_url: '#',
-        github_url: '#',
-        category: ['react']
+        deployed_url: '#https://ancoor-portfolio.netlify.app/',
+        github_url: 'https://github.com/ancoor/portfolio',
+        category: ['react','javascript']
     },
 
     {
@@ -68,7 +77,7 @@ const data_projects = [
         name: 'Chat App',
         image: chat,
         deployed_url: 'https://react-chat-ancoor.netlify.app/',
-        github_url: 'https://github.com/ancoor/CharApp',
+        github_url: 'https://github.com/ancoor/ChatApp',
         category: ['react']
     },
 

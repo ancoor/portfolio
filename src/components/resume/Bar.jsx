@@ -1,6 +1,6 @@
 import React from 'react';
-
-const Bar = ({ value: { icon, name, level } }) => {
+import react from '../../assets/icons/react.svg'
+const Bar = ({ value: {  name,language, level } }) => {
     const bar_width = `${level}%`
     return (
         <div className="bar">
@@ -8,7 +8,7 @@ const Bar = ({ value: { icon, name, level } }) => {
                 'width': bar_width
             }}>
                 <span className="bar__name">
-                    <img src={icon} alt="icon" className="bar__icon mr-2" />{name}
+                    <img src={react} alt="icon" className="bar__icon mr-2" />{(name)??language}
                 </span>
 
             </div>
