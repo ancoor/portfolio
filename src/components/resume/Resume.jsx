@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import Bar from './Bar';
-import {  experiences, tools } from '../data/resume_data';
+import { languagesStatic, experiences, tools } from '../data/resume_data';
 import {motion} from 'framer-motion'
 import './resume.css'
 
@@ -23,7 +23,7 @@ const resume_variant = {
     }
 }
 const Resume = () => {
-    const [languages,setLanguages] = useState('');
+    const [languages,setLanguages] = useState(languagesStatic);
     const apiLanguage = async() => {
          await fetch('https://aiinnovationworld.com/backend/api/getLanguages')
         .then(response => response.json())

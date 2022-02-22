@@ -1,6 +1,6 @@
 import react from '../../assets/icons/react.svg'
 
-export const languages = [
+export const languagesStatic = [
     {
         icon: react,
         name: 'PHP',
