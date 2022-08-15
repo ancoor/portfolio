@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import SkillCard from './SkillCard';
 import {skills} from '../data/about_data'
 import {motion} from 'framer-motion'
@@ -23,6 +23,22 @@ const about_variant = {
 }
 
 const About = () => {
+    const [skillData,setSkillData] = useState([]);
+    const apiSkills = async() => {
+         await fetch('https://portfolio-user-service.herokuapp.com/api/portfolio/about')
+        .then(response => response.json())
+        .then(({data}) => {
+            setSkillData(data)
+            // console.log('api',data.result[0])
+            });
+    }
+    useEffect(() => {
+        if(skillData.length === 0)
+        {
+            apiSkills();
+        }
+        console.log('languages',skillData)
+        }, [skillData]);
     return (
         <motion.div className="about"
             variants={about_variant}
@@ -37,7 +53,7 @@ const About = () => {
                 <h6 className="about__heading">What I offer</h6>
                 <div className="row">
                     {
-                        skills.map(skill =>
+                        skillData.map(skill =>
                             <SkillCard key={skill.title} skill={skill} />
 
                         )
