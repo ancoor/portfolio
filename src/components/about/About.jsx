@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import SkillCard from './SkillCard';
-import {skills} from '../data/about_data'
+// import {skills} from '../data/about_data'
 import {motion} from 'framer-motion'
 import './about.css'
 const about_variant = {
