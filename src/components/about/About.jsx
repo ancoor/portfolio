@@ -25,7 +25,7 @@ const about_variant = {
 const About = () => {
     const [skillData,setSkillData] = useState([]);
     const apiSkills = async() => {
-         await fetch('https://portfolio-user-service.herokuapp.com/api/portfolio/about')
+         await fetch('https://portfolio-user-service.herokuapp.com/api/portfolio/about?user=1')
         .then(response => response.json())
         .then(({data}) => {
             setSkillData(data)
