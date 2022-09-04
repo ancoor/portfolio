@@ -1,0 +1,75 @@
+.sk-cube-grid-loader {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sk-cube-grid-loader .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #333;
+    float: left;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  }
+
+  .sk-cube-grid-loader .sk-cube1 {
+    animation-delay: 0.2s;
+  }
+
+  .sk-cube-grid-loader .sk-cube2 {
+    animation-delay: 0.3s;
+  }
+
+  .sk-cube-grid-loader .sk-cube3 {
+    animation-delay: 0.4s;
+  }
+
+  .sk-cube-grid-loader .sk-cube4 {
+    animation-delay: 0.1s;
+  }
+
+  .sk-cube-grid-loader .sk-cube5 {
+    animation-delay: 0.2s;
+  }
+
+  .sk-cube-grid-loader .sk-cube6 {
+    animation-delay: 0.3s;
+  }
+
+  .sk-cube-grid-loader .sk-cube7 {
+    animation-delay: 0s;
+  }
+
+  .sk-cube-grid-loader .sk-cube8 {
+    animation-delay: 0.1s;
+  }
+
+  .sk-cube-grid-loader .sk-cube9 {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes sk-cubeGridScaleDelay {
+    0%,
+    70%,
+    100% {
+      transform: scale3D(1, 1, 1);
+    }
+    35% {
+      transform: scale3D(0, 0, 1);
+    }
+  }
+  
+  .fp-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #f8f8f8ad;
+}
+.fp-container .fp-loader {
+    top: 30%;
+    left: 48%;
+    z-index: 1000;
+    position: absolute;
+    
+}

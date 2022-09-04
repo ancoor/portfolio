@@ -3,6 +3,7 @@ import SkillCard from './SkillCard';
 // import {skills} from '../data/about_data'
 import {motion} from 'framer-motion'
 import './about.css'
+import { useStateContext } from '../../contexts/ContextProvider';
 const about_variant = {
     hidden: {
         opacity:0
@@ -24,13 +25,24 @@ const about_variant = {
 
 const About = () => {
     const [skillData,setSkillData] = useState([]);
+    const [skillHeader,setSkillHeader] = useState("");
+    const {  showLoader, hideLoader } = useStateContext();
     const apiSkills = async() => {
+        showLoader();
          await fetch('https://portfolio-user-service.herokuapp.com/api/portfolio/about?user=1')
         .then(response => response.json())
         .then(({data}) => {
             setSkillData(data)
             // console.log('api',data.result[0])
             });
+         await fetch('https://portfolio-user-service.herokuapp.com/api/portfolio/about-header?user=1')
+        .then(response => response.json())
+        .then(({data}) => {
+            setSkillHeader(data.header)
+            hideLoader();
+            // console.log('api',data.result[0])
+            });
+        
     }
     useEffect(() => {
         if(skillData.length === 0)
@@ -47,7 +59,7 @@ const About = () => {
             exit="exit"
         >
             <h6 className="about__intro">
-                I describe myself as someone who's persistant, a quick learner and loves problem solving by using simple and scalable solutions.
+                {skillHeader}
             </h6>
             <div className="container about__container">
                 <h6 className="about__heading">What I offer</h6>

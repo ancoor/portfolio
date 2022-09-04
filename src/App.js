@@ -6,13 +6,14 @@ import Resume from './components/resume/Resume';
 import Projects from './components/projects/Projects';
 import About from './components/about/About.jsx';
 import { AnimatePresence } from 'framer-motion'
-
+import  {useStateContext} from './contexts/ContextProvider';
 function App() {
 
   const location = useLocation();
-
+  const { loader } = useStateContext();
   return (
-  
+    <>
+        {loader}
         <div className="App">
           <div className="container app__container">
             <div className="row app__row">
@@ -41,6 +42,7 @@ function App() {
             </div>
           </div>
         </div>
+    </>
 
   );
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/logo.jpg" />
@@ -8,14 +7,26 @@
     <meta name="theme-color" content="#000000" />
     <meta name="robots" content="index, follow" />
     <meta name="title" content="Portfolio of Ancoor Banerjee" />
-    <meta name="description" content="Hi, this is Ancoor Banerjee. I am experienced Web Developer. Hope you love my portfolio and feel free to contact me." />
-    <meta name="keywords" content="React, fullstack, PHP, Laravel, CodeIgniter, JavaScript, ES6, jQuery" />
+    <meta
+      name="description"
+      content="Hi, this is Ancoor Banerjee. I am experienced Web Developer. Hope you love my portfolio and feel free to contact me."
+    />
+    <meta
+      name="keywords"
+      content="React, fullstack, PHP, Laravel, CodeIgniter, JavaScript, ES6, jQuery"
+    />
     <meta name="author" content="Ancoor Banerjee" />
-    <meta property="image" content="https://ancoor-portfolio.netlify.app/logo.jpg">
-    <meta property="og:image" content="https://ancoor-portfolio.netlify.app/logo.jpg"/>
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="200">
-    <meta property="og:image:height" content="200">
+    <meta
+      property="image"
+      content="https://ancoor-portfolio.netlify.app/logo.jpg"
+    />
+    <meta
+      property="og:image"
+      content="https://ancoor-portfolio.netlify.app/logo.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
 
     <!-- when you post this page url in facebook , this image will be shown -->
     <!-- facebook open graph ends from here -->
@@ -27,16 +38,96 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      #app:not(:empty) + .sk-cube-grid {
+        display: none;
+      }
 
+      .sk-cube-grid {
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+      }
+
+      .sk-cube-grid .sk-cube {
+        width: 33%;
+        height: 33%;
+        background-image: linear-gradient(to right bottom, #00F260, #0575E6);
+        float: left;
+        animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+      }
+
+      .sk-cube-grid .sk-cube1 {
+        animation-delay: 0.2s;
+      }
+
+      .sk-cube-grid .sk-cube2 {
+        animation-delay: 0.3s;
+      }
+
+      .sk-cube-grid .sk-cube3 {
+        animation-delay: 0.4s;
+      }
+
+      .sk-cube-grid .sk-cube4 {
+        animation-delay: 0.1s;
+      }
+
+      .sk-cube-grid .sk-cube5 {
+        animation-delay: 0.2s;
+      }
+
+      .sk-cube-grid .sk-cube6 {
+        animation-delay: 0.3s;
+      }
+
+      .sk-cube-grid .sk-cube7 {
+        animation-delay: 0s;
+      }
+
+      .sk-cube-grid .sk-cube8 {
+        animation-delay: 0.1s;
+      }
+
+      .sk-cube-grid .sk-cube9 {
+        animation-delay: 0.2s;
+      }
+
+      @keyframes sk-cubeGridScaleDelay {
+        0%,
+        70%,
+        100% {
+          transform: scale3D(1, 1, 1);
+        }
+        35% {
+          transform: scale3D(0, 0, 1);
+        }
+      }
+    </style>
     <title>Ancoor Banerjee | Portfolio</title>
   </head>
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
   </body>
-
 </html>
