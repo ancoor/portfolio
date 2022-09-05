@@ -4,11 +4,13 @@ import ProjectCard from './ProjectCard';
 import {motion} from 'framer-motion'
 import { useEffect } from 'react';
 import './projects.css'
+import { useStateContext } from '../../contexts/ContextProvider';
 
 const Projects = () => {
     const [projects, setProjects] = useState(data_projects)
     const [animation, setAnimation] = useState('visible')
     const [tab, setTab] = useState('all')
+    const { hideLoader } = useStateContext();
     // const activeTab = {
     //     borderBottom: '3px solid #00F260',
     //     fontSize: '1rem',
@@ -34,10 +36,11 @@ const Projects = () => {
                 const new_array = (tab !== 'all') ? data_projects.filter(project => project.category.includes(tab)) : data_projects
                 setProjects(new_array)
                 setAnimation('visible')
-
+                hideLoader();
             },300)
         }
         // setAnimation('visible')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [animation,tab])
 
     const projects_variant = {

@@ -3,6 +3,7 @@ import Bar from './Bar';
 import { languagesStatic, experiences, tools } from '../data/resume_data';
 import {motion} from 'framer-motion'
 import './resume.css'
+import { useStateContext } from '../../contexts/ContextProvider';
 
 const resume_variant = {
     hidden: {
@@ -24,6 +25,7 @@ const resume_variant = {
 }
 const Resume = () => {
     const [languages,setLanguages] = useState(languagesStatic);
+    const { hideLoader } = useStateContext();
     const apiLanguage = async() => {
          await fetch('https://aiinnovationworld.com/backend/api/getLanguages')
         .then(response => response.json())
@@ -38,6 +40,9 @@ const Resume = () => {
             apiLanguage();
         }
         console.log('languages',languages)
+        hideLoader();
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [languages]);
     return (
         <motion.div className="container resume"
