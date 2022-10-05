@@ -22,6 +22,7 @@ const Sidebar = () => {
     resume: "",
     secondaryContact: "",
     state: "",
+    user: {firstName: "", lastName: "", email: ""}
   });
   const { showLoader, hideLoader } = useStateContext();
   const apiSidebar = async () => {
@@ -57,6 +58,7 @@ const Sidebar = () => {
             resume: service.portfolio.files.url+"/resume/"+response.resume,
             secondaryContact: response.secondaryContact,
             state: response.state,
+            user: { firstName: response.user_id.firstName, lastName: response.user_id.lastName, email: response.user_id.email }
           });
         hideLoader();
       });
@@ -66,7 +68,7 @@ const Sidebar = () => {
     // eslint-disable-next-line
   }, []);
   const handleEmailMe = () => {
-    window.open("mailto:ancoorbanerjee7@gmail.com");
+    window.open(`mailto:${sidebar.user.email}`);
   };
 
   const sidebar_variant = {
@@ -92,7 +94,7 @@ const Sidebar = () => {
     >
       <img src={sidebar.profile} alt="avatar" className="sidebar__avatar" />
       <div className="sidebar__name">
-        Ancoor <span>Banerjee</span>{" "}
+        {sidebar.user.firstName} <span>{sidebar.user.lastName}</span>{" "}
       </div>
       <div className="sidebar__item sidebar__title">Web Developer</div>
       <a href={sidebar.resume} download="resume.pdf">
@@ -123,7 +125,7 @@ const Sidebar = () => {
           <img src={pin} alt="location" className="sidebar__icon mr-1" />
           {sidebar.city}, {sidebar.state}, {sidebar.country}
         </div>
-        <div className="sidebar__item">ancoorbanerjee7@gmail.com</div>
+        <div className="sidebar__item">{sidebar.user.email}</div>
         <div className="sidebar__item">{sidebar.primaryContact} / {sidebar.secondaryContact}</div>
       </div>
       <div className="sidebar__item sidebar__email" onClick={handleEmailMe}>
