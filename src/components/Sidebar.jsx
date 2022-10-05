@@ -5,8 +5,6 @@ import linkedin from "../assets/icons/linkedin.svg";
 import github from "../assets/icons/github.svg";
 import pin from "../assets/icons/pin.svg";
 import tie from "../assets/icons/tie.svg";
-import profile from "../assets/profile.jpg";
-import resume from "../assets/resume.pdf";
 import { motion } from "framer-motion";
 import { useStateContext } from "../contexts/ContextProvider";
 import { service } from "./data/config";
