@@ -54,8 +54,8 @@ const Sidebar = () => {
             instagram: response.instagram,
             linkdin: response.linkdin,
             primaryContact: response.primaryContact,
-            profile: service.portfolio.files.url+"/profile/"+response.profile,
-            resume: service.portfolio.files.url+"/resume/"+response.resume,
+            profile: response.profile,
+            resume: response.resume,
             secondaryContact: response.secondaryContact,
             state: response.state,
             user: { firstName: response.user_id.firstName, lastName: response.user_id.lastName, email: response.user_id.email }
