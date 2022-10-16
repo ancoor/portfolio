@@ -86,7 +86,6 @@ const Projects = () => {
         <div className="container projects">
             <div className="row projects__navbar">
                 <div className={(tab === 'all') ? "project__navbar-active" : null} onClick={() => handleFilterCategory('all')}>All</div>
-                <div className={(tab === 'codeigniter') ? "project__navbar-active" : null} onClick={() => handleFilterCategory('codeigniter')}>CodeIgniter</div>
                 <div className={(tab === 'wordpress') ? "project__navbar-active" : null} onClick={() => handleFilterCategory('wordpress')}>Wordpress</div>
                 <div className={(tab === 'php') ? "project__navbar-active" : null} onClick={() => handleFilterCategory('php')}>PHP</div>
                 <div className={(tab === 'javascript') ? "project__navbar-active" : null} onClick={() => handleFilterCategory('javascript')}>JavaScript</div>
