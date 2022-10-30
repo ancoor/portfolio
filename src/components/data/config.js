@@ -8,6 +8,20 @@ export const service = {
             url: 'https://portfolio-user-service.herokuapp.com/api/portfolio/contact',
             dev: 'http://localhost:8080/api/portfolio/contact'
         },
+        resume: {
+            experience: {
+                url: 'https://portfolio-user-service.herokuapp.com/api/portfolio/resume/experience',
+                dev: 'http://localhost:8080/api/portfolio/resume/experience'
+            },
+            skillset: {
+                url: 'https://portfolio-user-service.herokuapp.com/api/portfolio/resume/skillset',
+                dev: 'http://localhost:8080/api/portfolio/resume/skillset'
+            },
+            resume: {
+                url: 'https://portfolio-user-service.herokuapp.com/api/portfolio/resume',
+                dev: 'http://localhost:8080/api/portfolio/resume'
+            }
+        },
         upload: {
             url: 'https://portfolio-user-service.herokuapp.com/api/portfolio/upload',
             dev: 'http://localhost:8080/api/portfolio/upload'
