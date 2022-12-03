@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "./resume.css";
 import { useStateContext } from "../../contexts/ContextProvider";
 import moment from "moment/moment";
+import {service} from "../data/config"
 
 const resume_variant = {
   hidden: {
@@ -29,7 +30,7 @@ const Resume = () => {
   const apiLanguage = async () => {
     showLoader();
     await fetch(
-      "https://portfolio-user-service.herokuapp.com/api/portfolio/resume?user=1"
+      service.portfolio.resume.resume.url+"?user=1"
     )
       .then((response) => response.json())
       .then((data) => {

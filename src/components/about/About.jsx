@@ -4,6 +4,7 @@ import SkillCard from "./SkillCard";
 import { motion } from "framer-motion";
 import "./about.css";
 import { useStateContext } from "../../contexts/ContextProvider";
+import { service } from "../data/config";
 const about_variant = {
   hidden: {
     opacity: 0,
@@ -30,14 +31,14 @@ const About = () => {
   const apiSkills = async () => {
     showLoader();
     await fetch(
-      "https://portfolio-user-service.herokuapp.com/api/portfolio/about?user=1"
+      service.portfolio.about.url+"?user=1"
     )
       .then((response) => response.json())
       .then(({ data }) => {
         setSkillData(data);
       });
     await fetch(
-      "https://portfolio-user-service.herokuapp.com/api/portfolio/about-header?user=1"
+      service.portfolio.about.url+"-header?user=1"
     )
       .then((response) => response.json())
       .then(({ data }) => {

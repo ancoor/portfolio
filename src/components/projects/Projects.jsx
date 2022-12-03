@@ -4,6 +4,7 @@ import {motion} from 'framer-motion'
 import { useEffect } from 'react';
 import './projects.css'
 import { useStateContext } from '../../contexts/ContextProvider';
+import { service } from '../data/config';
 
 const Projects = () => {
     const [projects, setProjects] = useState([])
@@ -19,7 +20,7 @@ const Projects = () => {
     const getProjects = async () => {
         showLoader();
         await fetch(
-          "https://portfolio-user-service.herokuapp.com/api/portfolio/projects?user=1"
+          service.portfolio.project.url+"?user=1"
         )
           .then((response) => response.json())
           .then(({ data }) => {
