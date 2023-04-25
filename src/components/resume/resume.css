@@ -3,6 +3,9 @@
 
 .resume {
     padding-top: 20px;
+    height: 70vh;
+    overflow-y: auto;
+    margin-bottom: -35px;
 }
 
 .resume-card__heading,

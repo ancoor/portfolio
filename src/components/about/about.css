@@ -2,7 +2,10 @@
 
 .about {
     padding: 20px;
-    margin: -35px;
+    margin-right: -35px;
+    margin-left: -35px;
+    height: 70vh;
+    overflow-y: auto;
 }
 
 .about__intro {
