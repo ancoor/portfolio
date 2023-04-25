@@ -2,13 +2,16 @@
 
 .about {
     padding: 20px;
-    margin: -35px;
+    margin-right: -35px;
+    margin-left: -35px;
+    height: 70vh;
+    overflow-y: auto;
 }
 
 .about__intro {
     font-size: 1rem;
-    padding: 20px 28px;
-    margin: 10px 0;
+    padding: 0px 28px 20px 28px;
+    
 }
 
 .about__container {
