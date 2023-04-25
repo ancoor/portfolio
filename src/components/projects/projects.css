@@ -1,10 +1,9 @@
 
 /* projects */
 .projects {
-    height: 70vh;
+    height: 77vh;
     padding-top: 30px;
     overflow-y: auto;
-    margin-bottom: -35px;
 }
 
 .projectCard__wrapper {
