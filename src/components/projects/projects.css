@@ -5,7 +5,11 @@
     padding-top: 30px;
     overflow-y: auto;
 }
-
+@media (max-width: 600px){
+    .projects {
+        height: 70vh;
+    }
+}
 .projectCard__wrapper {
     margin: 10px 0;
     width: 100%;

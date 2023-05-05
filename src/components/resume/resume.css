@@ -6,7 +6,11 @@
     padding-top: 20px;
     overflow-y: auto;
 }
-
+@media (max-width: 600px){
+    .resume {
+        height: 70vh;
+    }
+}
 .resume-card__heading,
 .resume-language__heading {
     margin-left: 10px;
