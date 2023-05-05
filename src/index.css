@@ -152,11 +152,12 @@ a:hover {
     .app__main-content{
         margin-right: 10px;
         margin-left: 10px;
-        bottom:30px;
+        bottom: 50px !important;
     }
     .sidebar__container{
         padding-left: 10px;
         padding-right: 10px;
+        margin-bottom: 50px;
     }
     .navbar__active {
         font-size: 1.5rem;
