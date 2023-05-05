@@ -97,7 +97,7 @@ const Sidebar = () => {
         {sidebar.user.firstName} <span>{sidebar.user.lastName}</span>{" "}
       </div>
       <div className="sidebar__item sidebar__title">Web Developer</div>
-      <a href={sidebar.resume} download="resume.pdf">
+      <a href={sidebar.resume} download target="_blank" rel="noopener noreferrer">
         <div className="sidebar__item sidebar__resume">
           <img src={tie} alt="resume" className="sidebar__icon" />
           Download Resume
