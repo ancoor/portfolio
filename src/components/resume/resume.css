@@ -2,7 +2,9 @@
 /* resume */
 
 .resume {
+    height: 77vh;
     padding-top: 20px;
+    overflow-y: auto;
 }
 
 .resume-card__heading,
