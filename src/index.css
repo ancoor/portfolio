@@ -144,7 +144,7 @@ a:hover {
 }
 
 
-@media (max-width: 600px)
+@media (max-width: 1000px)
 {
     .app__container {
         padding-top: 30px;
